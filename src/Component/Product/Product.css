@@ -1,0 +1,30 @@
+.product{
+    padding: 7px;
+    border-radius: 8px;
+    border: 2px solid green;
+    margin: 20px;
+}
+
+.product img{
+  width: 286px;
+  height: 286px;
+  border-radius: 8px;
+  
+}
+.product-info{
+   margin: 10px; 
+  align-items: center;
+}
+.btn{
+  width: 45%;
+  height: 35px;
+  background-color: #ffe0b3;
+  border-radius: 15px;
+  display: flex;
+align-items:center;
+justify-content: center;
+margin-left:105px;
+}
+.btn:hover{
+  background-color: crimson;
+}

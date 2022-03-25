@@ -1,0 +1,57 @@
+[
+  {
+    "img": "images/shoes-1.jpg",
+    "id": "1",
+    "name": "ULTRABOOST 22 SHOES",
+    "price": 2020
+  },
+  {
+    "img": "images/shoes-2.jpg",
+    "id": "2",
+    "name": "LUNAR NEW YEAR ULTRABOOST",
+    "price": 3020
+  },
+  {
+    "img": "images/shoes-3.jpg",
+    "id": "3",
+    "name": "SUPERNOVA SHOES",
+    "price": 4204
+  },
+  {
+    "img": "images/shoes-4.jpg",
+    "id": "4",
+    "name": "LITE RACER ADAPT",
+    "price": 4220
+  },
+  {
+    "img": "images/shoes-5.jpg",
+    "id": "5",
+    "name": "4DFWD SHOES",
+    "price": 1420
+  },
+  {
+    "img": "images/shoes-6.jpg",
+    "id": "6",
+    "name": "KAPTIR 2.0 SHOES",
+    "price": 1300
+  },
+  {
+    "img": "images/shoes-7.jpg",
+    "id": "7",
+    "name": "4DFWD PULSE SHOES",
+    "price": 1920
+  },
+  {
+    "img": "images/shoes-8.jpg",
+    "id": "8",
+    "name": "ZX 1K BOOST SHOES",
+    "price": 2820
+  },
+  {
+    "img": "images/shoes-9.webp",
+    "id": "9",
+    "name": "NMD_R1 V2 SHOES",
+    "price": 1520
+  }
+  
+]
