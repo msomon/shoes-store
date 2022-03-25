@@ -28,3 +28,6 @@ margin-left:105px;
 .btn:hover{
   background-color: crimson;
 }
+.btn-text{
+  margin-right: 5px;
+}
