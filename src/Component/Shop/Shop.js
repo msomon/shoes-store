@@ -38,6 +38,7 @@ const img = numbers[selectOne]
 }
 
 const removeBtn = carts =>{
+ 
 setCarts([])
  
 }
