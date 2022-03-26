@@ -9,3 +9,20 @@
 .cart-container{
   background-color:cornsilk;
 }
+.all-btn{
+  display: grid;
+  grid-template-columns:repeat(1,1fr) ; 
+  width: 80%;
+  margin: auto;
+}
+.choose-btn{
+  background-color: blueviolet;
+  border-radius: 15px;
+ height: 30px;
+}
+.again-btn{
+background-color: mediumseagreen;
+margin-top: 10px;
+border-radius: 15px;
+height: 30px;
+}

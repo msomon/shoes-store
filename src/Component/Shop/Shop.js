@@ -23,7 +23,7 @@ addToDb(product.id)
     
 }
 
-console.log(carts);
+// console.log(carts);
   return (
     <div className='container'>
      <div className='shop-container'>
@@ -32,11 +32,14 @@ console.log(carts);
       }
      </div>
      <div className='cart-container'>
-     <h2>Cart Product </h2>
+     <h1>Selected Shoes</h1>
      {
-       carts.map(cart=><Cart carts={cart} key={cart.id}> </Cart>
-       )
+       carts.map(cart=><Cart carts={cart}></Cart>)
      }
+     <div className='all-btn'>
+     <button className='choose-btn'>Choose 1 For Me </button>
+    <button className='again-btn'>Choose Again</button>
+     </div>
 
      </div>
       

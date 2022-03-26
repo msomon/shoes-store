@@ -11,7 +11,7 @@ const{name,img,price}= product ;
     <div className='product'>
       <img src={img} alt="" />
       <div className='product-info'>
-      <h3>Name:{name}</h3>
+      <h3>Shoes Name:{name}</h3>
       <h3>Price:${price}</h3>
       <button onClick={()=>addToCart(product)} className='btn'><p className='btn-text'>Add To Cart</p> <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></button>
       </div>
