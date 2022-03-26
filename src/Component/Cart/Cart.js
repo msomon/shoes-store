@@ -1,15 +1,13 @@
+// import { faHourglass3 } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 
 const Cart = ({carts}) => {
   
-    for(const cart in carts){
-console.log(cart);
-    }
-    
+console.log(carts);
   return (
-    <div>
-      <h2>Selected Shoes</h2>
+    <div className='cart'>
       
+        <h3>Name:{carts.name.slice(0,10)}</h3>
     </div>
   );
 };
