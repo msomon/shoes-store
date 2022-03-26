@@ -15,15 +15,32 @@ useEffect(()=>{
 const [carts,setCarts]=useState([]);
 
 const addTocart =(product)=>{
-  // console.log(product.id);
- 
   const newProduct = [...carts,product]
   setCarts(newProduct);
-addToDb(product.id)
-    
+  
+  addToDb(product)
+//  console.log(data);  
 }
 
-// console.log(carts);
+const [id,setId]=useState([])
+
+const chooseOne =(numbers)=>{
+
+  function randomIntFromInterval(min, max) { // min and max included 
+    return Math.floor(Math.random() * (max - min + 1) + min);
+
+  }
+  const number= numbers.length
+  const selectOne = randomIntFromInterval(0,number)
+  setId(selectOne)
+}
+
+const removeBtn = carts =>{
+setCarts([])
+ 
+}
+
+
   return (
     <div className='container'>
      <div className='shop-container'>
@@ -34,11 +51,12 @@ addToDb(product.id)
      <div className='cart-container'>
      <h1>Selected Shoes</h1>
      {
-       carts.map(cart=><Cart carts={cart}></Cart>)
+       carts.map(cart=><Cart carts={cart} key={cart.id} ></Cart>)
      }
+     <h4>Apni ai namber ta nita paren : {id}</h4>
      <div className='all-btn'>
-     <button className='choose-btn'>Choose 1 For Me </button>
-    <button className='again-btn'>Choose Again</button>
+     <button onClick={()=>chooseOne(carts)} className='choose-btn'>Choose 1 For Me </button>
+    <button onClick={()=>removeBtn(carts)} className='again-btn'>Choose Again</button>
      </div>
 
      </div>

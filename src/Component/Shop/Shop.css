@@ -8,6 +8,8 @@
 }
 .cart-container{
   background-color:cornsilk;
+  position:sticky;
+  top:0px;
 }
 .all-btn{
   display: grid;

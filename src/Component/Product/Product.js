@@ -6,13 +6,14 @@ import './Product.css'
 const Product = (props) => {
   // console.log(props);
 const {product,addToCart}=props ;
-const{name,img,price}= product ;
+const{name,img,price,id}= product ;
   return (
     <div className='product'>
       <img src={img} alt="" />
       <div className='product-info'>
       <h3>Shoes Name:{name}</h3>
       <h3>Price:${price}</h3>
+      <h3>Id:{id}</h3>
       <button onClick={()=>addToCart(product)} className='btn'><p className='btn-text'>Add To Cart</p> <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon></button>
       </div>
       

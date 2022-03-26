@@ -3,8 +3,10 @@ import './App.css';
 import Shop from './Component/Shop/Shop';
 
 function App() {
+  
   return (
     <div className="App">
+      <h1 className='shop'> Shose Store</h1>
      <Shop></Shop>
     </div>
   );
