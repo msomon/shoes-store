@@ -32,7 +32,9 @@ const chooseOne =(numbers)=>{
   }
   const number= numbers.length
   const selectOne = randomIntFromInterval(0,number)
-  setId(selectOne)
+const img = numbers[selectOne]
+
+  setId(img)
 }
 
 const removeBtn = carts =>{
@@ -53,7 +55,8 @@ setCarts([])
      {
        carts.map(cart=><Cart carts={cart} key={cart.id} ></Cart>)
      }
-     <h4>Apni ai namber ta nita paren : {id}</h4>
+     <img src={id.img} alt="" />
+     <h3>Suggetion:{id.name}</h3>
      <div className='all-btn'>
      <button onClick={()=>chooseOne(carts)} className='choose-btn'>Choose 1 For Me </button>
     <button onClick={()=>removeBtn(carts)} className='again-btn'>Choose Again</button>

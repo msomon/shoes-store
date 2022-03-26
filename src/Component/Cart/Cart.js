@@ -11,11 +11,7 @@ const Cart = ({carts,id}) => {
       <img className='image' src={carts.img} alt="" />
         <h3>Name:{carts.name.slice(0,10)}</h3>
         
-   Question-1 = how react works :
-   React is a JavaScript library .we can build dynamic and interactive web apps with ease. It fastand flexible, powerful, and has a robust developer community that rapidly growing. (DOM)mean Document Object Model is an application programming interface (API) for HTML and XML documents.DOM tree in it to speed up its manipulation. It contains different methods like getElementById to target each node and we use JS to work with the DOM.react is very helpfull for developer to develop a website .
-
-   Question:2 = props vs state 
-   props and states are very improtent element of react . Props are used to pass data from one component to another,and state is a local data storage that is local to the component only and cannot be passed to other components.when we have a piece of code that you would like to reuse, you can place that code into a function and we can use it dynamicaly .props and state save our time .
+   
     </div>
   );
 };

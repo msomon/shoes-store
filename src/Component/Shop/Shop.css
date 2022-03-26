@@ -28,3 +28,16 @@ margin-top: 10px;
 border-radius: 15px;
 height: 30px;
 }
+@media (max-width:510px){
+  .shop-container{
+    width: 230px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    align-items: center;
+    justify-content: center;
+    padding-left: 15px;
+  } 
+  .cart-container{
+    width: 220px;
+  }
+}
