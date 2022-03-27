@@ -3,6 +3,7 @@ import './Suggasition.css'
 
 const Suggasition = (props) => {
   const {id}= props ;
+  // console.log(id);
   return (
     <div className='suggest'>
       <img className='img' src={id.img} alt="" />

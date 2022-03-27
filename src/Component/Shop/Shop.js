@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import Suggasition from '../Suggation/Suggasition';
-import { addToDb } from '../Utilities/Fakedb';
 import './Shop.css'
 
 const Shop = () => {
@@ -17,10 +16,8 @@ const [carts,setCarts]=useState([]);
 
 const addTocart =(product)=>{
   const newProduct = [...carts,product]
-  setCarts(newProduct);
-  
-  addToDb(product)
-  
+  setCarts(newProduct)
+ 
 }
 
 const [id,setId]=useState([])
@@ -30,11 +27,11 @@ const chooseOne =(numbers)=>{
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
-  const number= numbers.length
+  const number = numbers.length
   const selectOne = randomIntFromInterval(0,number)
-const img = numbers[selectOne]
+const suggest = numbers[selectOne]
 
-  setId(img)
+  setId(suggest)
 }
 
 const removeBtn = carts =>{

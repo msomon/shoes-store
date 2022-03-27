@@ -1,10 +1,9 @@
-# Getting Started with Create React App
+# SHOES STORE  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## LIVE SITE LINK 
 
-In the project directory, you can run:
+Click here to go live site:https://shoes-store-12.netlify.app
 
 ### `npm start`
 
