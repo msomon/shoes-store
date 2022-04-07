@@ -6,6 +6,7 @@ function App() {
   
   return (
     <div className="App">
+    
       <h1 className='shop'> Shose Store</h1>
      <Shop></Shop>
      Question-1 => how react works :

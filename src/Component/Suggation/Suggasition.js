@@ -1,15 +1,19 @@
 import React from 'react';
 import './Suggasition.css'
 
-const Suggasition = (props) => {
-  const {id}= props ;
-  // console.log(id);
+const Suggasition = ({cart}) => {
+  // console.log(cart.name);
+  
   return (
-    <div className='suggest'>
-      <img className='img' src={id.img} alt="" />
-     <h3>Suggetion:{id.name}</h3>
-    </div>
-  );
+   <div className='suggest'>
+   <img className='img' src={cart.img} alt="" />
+  <h3>Suggetion:{cart.name}</h3>
+ </div>
+     
+
+    )
+
+ 
 };
 
 export default Suggasition;

@@ -10,34 +10,59 @@ useEffect(()=>{
   fetch('product.json')
   .then(res=>res.json())
   .then(data=>setProduct(data))
-},[]);
+},[products]);
 
 const [carts,setCarts]=useState([]);
 
-const addTocart =(product)=>{
-  const newProduct = [...carts,product]
-  setCarts(newProduct)
+const addTocart =(products)=>{
+  // console.log(products);
+  const exist= carts.find(product=>product.id == products.id)
+  if(!exist){
+    // products.quantity = 1
+    const newProduct = [...carts,products]
+    setCarts(newProduct)
+  }else{
+    // const rest = carts.filter(product=>product.id== products.id)
+    // products.quantity = products.quantity + 1
+    // const newProduct = [...rest,products]
+
+    // setCarts(newProduct)
+    alert('no way to add')
+    
+  }
+  
  
 }
 
-const [id,setId]=useState([])
-const chooseOne =(numbers)=>{
+const removeToCart=products=>{
+  const rest = carts.filter(product=>product.id !==products.id)
+  setCarts(rest)
+}
 
-  function randomIntFromInterval(min, max) { // min and max included 
-    return Math.floor(Math.random() * (max - min + 1) + min);
-  }
 
-  const number = numbers.length
-  const selectOne = randomIntFromInterval(0,number)
-const suggest = numbers[selectOne]
+const [suggestProduct,setSuggestProduct]=useState({})
+const chooseOne =(carts)=>{
 
-  setId(suggest)
+ const random = Math.floor(Math.random()*carts.length)
+  
+const suggest =carts[random]
+
+  setSuggestProduct(suggest)
 }
 
 const removeBtn = carts =>{
  
 setCarts([])
+setSuggestProduct([])
 }
+const [itemLength,setItemLength]=useState(false)
+useEffect(()=>{
+  if(carts.length >0){
+    setItemLength(true)
+  }else{
+    setItemLength(false)
+  }
+} ,[carts])
 
 
   return (
@@ -50,15 +75,23 @@ setCarts([])
      <div className='cart-container'>
      <h1>Selected Shoes</h1>
      {
-       carts.map(cart=><Cart carts={cart} key={cart.id} ></Cart>)
+       carts.map(cart=><Cart removeToCart={removeToCart} carts={cart} key={cart.id} ></Cart>)
      }
-     <Suggasition id={id}></Suggasition>
+     
+     <Suggasition cart={suggestProduct} carts={carts}></Suggasition>
      <div className='all-btn'>
-     <button onClick={()=>chooseOne(carts)} className='choose-btn'>Choose 1 For Me </button>
+     <button disabled={!itemLength} onClick={()=>chooseOne(carts)} className='choose-btn'>Choose 1 For Me </button>
+     
     <button onClick={()=>removeBtn(carts)} className='again-btn'>Choose Again</button>
      </div>
-
-     </div>  
+     </div>
+     
+     {/* {carts.length ==4 ?<p>not adding more product </p>:<p>adding more product </p> } */}
+     {/* {
+       carts.length !==4 && <div>
+         <h1>hlw all go </h1>
+       </div>
+     } */}
     </div>
   );
 };

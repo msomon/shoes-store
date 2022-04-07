@@ -11,3 +11,20 @@ width: 50px;
 border-radius: 50px;
 margin-right: 10px;
 }
+.removeBtn{
+  margin-left: 5px;
+  padding: 5px;
+  width: 60px;
+  height: 25px;
+  border-radius: 15px;
+  
+  color: red;
+  background-color: ;
+  justify-content: center;
+  text-align: center;
+
+}
+.icon{
+  font-size: 17px;
+  margin:auto
+}
